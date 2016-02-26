@@ -285,3 +285,10 @@ it is used as the asdf defsystem depends-on list."
         (funcall hook pathname :depends-on depends-on :name name
                                :allow-other-keys t)))
     name))
+
+
+(defun make-err-project (path)
+  (my-qp:make-project
+   path
+   :depends-on '(:err)
+   :template-directory "~/quicklisp/local-projects/my-qp/templates/err/"))

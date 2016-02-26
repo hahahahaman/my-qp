@@ -4,6 +4,7 @@
   (:documentation "Modified Quickproject package.")
   (:use #:cl)
   (:export #:make-project
+           #:make-err-project
            #:*after-make-project-hooks*
            #:*author*
            #:*license*

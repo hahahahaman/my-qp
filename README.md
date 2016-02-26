@@ -1,6 +1,11 @@
-my-qp is a personal fork of Quickproject, with templates.
+### my-qp
 
 ---
+
+A personal fork of [Quickproject](http://www.xach.com/lisp/quickproject/) with
+templates.
+
+#### Original Description:
 
 Quickproject creates the skeleton of a Common Lisp project.
 
