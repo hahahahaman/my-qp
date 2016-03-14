@@ -9,19 +9,20 @@
   (defun render ()
     (timer-update render-timer)
     (when (timer-ended-p render-timer)
-      )))
+
+      (timer-reset render-timer))))
 
 (let ((update-timer (make-timer :end (/ 1.0 120.0))))
   (defun update ()
     (timer-update update-timer)
     (iter (while (timer-ended-p update-timer))
-      (timer-keep-overflow update-timer)
-      )))
+
+      (timer-keep-overflow update-timer))))
 
 (defun cleanup ())
 
 (defun run ()
-  (err:run "insert-title"
+  (err-run "insert-title"
            :init-code (initialize)
            :input-code (handle-input)
            :render-code (render)
